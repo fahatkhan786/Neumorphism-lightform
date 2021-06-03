@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #ebf5fc;
+}
+.form {
+  width: 350px;
+  height: 75vh;
+  background: #ebf5fc;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 35px 40px;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  z-index: 1;
+}
+.form h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #32a3b1;
+}
+.form .inputbox {
+  text-align: left;
+  margin-top: 20px;
+}
+.form .inputbox label {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.form .inputbox i {
+  margin-right: 2px;
+}
+.form .inputbox input {
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  color: #32a3b1;
+  background: #ebf5fc;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.form .inputbox input:placeholder {
+  color: #adadad;
+  font-size: 16px;
+}
+
+/* ANIMATIONs */
+.form .inputbox input:focus {
+  margin-top: 5px;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 1),
+    2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.form .inputbox input:focus ~ label,
+.form .inputbox input:valid ~ label {
+  color: #32a3b1;
+}
+.form .inputbox input:focus ~ label i,
+.form .inputbox input:valid ~ label i {
+  color: #32a3b1;
+}
+
+.forget {
+  text-align: right;
+  margin-top: 5px;
+}
+.forget a {
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: #ff0047;
+}
+
+.btn {
+  margin-top: 15px;
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #32a3b1;
+  background: #ebf5fc;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.btn:active {
+  color: #ff0047;
+  margin-top: 20px;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 1),
+    2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bottom {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+.bottom a {
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  margin: 2px;
+  color: #ff0047;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* scroll-btn */
+.check {
+  margin: -22% 22%;
+  position: absolute;
+  height: 25px;
+  width: 50px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  background: grey;
+  border-radius: 20px;
+}
+input[type="checkbox"]:checked ~ .check {
+  background: #131419;
+  box-shadow: 0px 0px 250px 1000px #32a3b1;
+  opacity: 0.8;
+  transition: 0.2s ease-in;
+}
+.check:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  background: #32a3b1;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  z-index: 2;
+}
+input[type="checkbox"]:checked ~ .check:before {
+  transform: translateX(24px);
+}
+.check:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 4.2px;
+  background: #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  transform: translateX(-25px);
+  z-index: 2;
+}
+input[type="checkbox"]:checked ~ .check:after {
+  transform: translateX(0px);
+  transition: 0.3s ease-in-out;
+}
+
+.auth {
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #adadad;
+  opacity: 0.8;
+}
+
+.social ul {
+  margin-top: 200px;
+  display: inline-flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.social ul li {
+  list-style-type: none;
+}
+.social ul li a {
+  font-size: 30px;
+  padding: 5px;
+  line-height: 20px;
+  min-width: 50px;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.social ul li a .fa {
+  position: relative;
+  color: #555;
+  transition: 0.5s;
+}
+.social ul li a:hover .fa {
+  color: #131419;
+}
+.social ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00ff00;
+  transition: 0.5s;
+}
